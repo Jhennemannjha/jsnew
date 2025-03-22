@@ -1,8 +1,8 @@
 ////////////// Dados Primitivos //////////////////
 //String, Number, undefined, null e Symbol (simbol e falado mais a frente)
-const nome = 'Luiz'; // string
-const nomel = "Luiz"; // string
-const nome2 = "Luiz"; // string
+const nome = 'Luiz1'; // string
+const nomel = "Luiz1"; // string
+const nome2 = "Luiz1"; // string
 const num1 = 10; // number
 const num2 = 10.52; // number
 let nomeAluno; // undefined -> não aponta pra local nenhuma na memória mas pode retornar valor
