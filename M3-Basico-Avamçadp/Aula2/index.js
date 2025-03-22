@@ -1,6 +1,6 @@
 //Operadores
 /*
-Operadores de comparação
+Operadores de covmparação
 > maiqr que
 > maior que ou igual a
 < menor que
