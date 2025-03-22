@@ -1,0 +1,146 @@
+const data = new Date(2014, 0, 21, 10, 56, 23, 800);
+const dia = data.getDay();
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////
+let diaSemanaTextoSwitch;
+switch (dia) {
+    case 0:
+        diaSemanaTextoSwitch = "Domingo"
+        break;
+    case 1:
+        diaSemanaTextoSwitch = "Segunda"
+        break;
+    case 2:
+        diaSemanaTextoSwitch = "Terça"
+        break;
+    case 3:
+        diaSemanaTextoSwitch = "Quarta"
+        break;
+    case 4:
+        diaSemanaTextoSwitch = "Quinta"
+        break;
+    case 5:
+        diaSemanaTextoSwitch = "Sexta"
+        break;
+    case 6:
+        diaSemanaTextoSwitch = 'Sabado'
+        break;
+    default:
+        diaSemanaTextoSwitch = "";
+}
+
+console.log(`Dia da semana com Switch fora de uma funçao: ${dia} ${diaSemanaTextoSwitch}`);
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////
+let diaSemanaTextoif;
+if (dia === 0) {
+    diaSemanaTextoif = 'Domingo';
+}
+else if (dia === 1) {
+    diaSemanaTextoif = 'Segunda';
+}
+else if (dia === 2) {
+    diaSemanaTextoif = 'Terça';
+}
+else if (dia === 3) {
+    diaSemanaTextoif = 'Quarta';
+}
+else if (dia === 4) {
+    diaSemanaTextoif = 'Quinta';
+}
+else if (dia === 5) {
+    diaSemanaTextoif = 'Sexta';
+}
+else if (dia === 6) {
+    diaSemanaTextoif = 'Sábado';
+}
+else {
+    diaSemanaTextoif = "erro";
+}
+
+
+
+console.log(`Dia da semana com if fora de função: ${dia}, ${diaSemanaTextoif}`);
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+//a const nao necessariamente precisa ter o mesmo nome que a let de dentro do escopo da função mas por padrao para outros programadores, colocamos
+//esta const esta dizendo que ele esta recebendo o resultado de diaz referente o argumento que esta recebendo e esse argumento ira vira o argumento da função
+const diaSemanaTextoSwitchComFuncao = DiaZ(7)//esse parametro que dia z esta recebendo subistitui o resultadoswitch
+function DiaZ(argumento) {
+    //let e const dentro do escopo da função pode ter o mesmo nomes que variaveis do lado de fora da função
+    let diaSemanaTextoSwitchComFuncao;
+    switch (argumento) {
+        case 0:
+            diaSemanaTextoSwitchComFuncao = "Domingo"
+            return diaSemanaTextoSwitchComFuncao;
+        case 1:
+            diaSemanaTextoSwitchComFuncao = "Segunda"
+            return diaSemanaTextoSwitchComFuncao;
+        case 2:
+            diaSemanaTextoSwitchComFuncao = "Terça"
+            return diaSemanaTextoSwitchComFuncao;
+        case 3:
+            diaSemanaTextoSwitchComFuncao = "Quarta"
+            return diaSemanaTextoSwitchComFuncao;
+        case 4:
+            diaSemanaTextoSwitchComFuncao = "Quinta"
+            return diaSemanaTextoSwitchComFuncao;
+        case 5:
+            diaSemanaTextoSwitchComFuncao = "Sexta"
+            return diaSemanaTextoSwitchComFuncao;
+        case 6:
+            diaSemanaTextoSwitchComFuncao = 'Sabado'
+            return diaSemanaTextoSwitchComFuncao;
+        default:
+            diaSemanaTextoSwitchComFuncao = "erro";
+            return diaSemanaTextoSwitchComFuncao;
+    }
+}
+
+console.log(`Dia da semana com Switch dentro de função: ${diaSemanaTextoSwitchComFuncao}`);
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+const plotDiaSemanaIfComFuncao = semana(dia);
+function semana(dia) {
+    let diaSemanaTextoifComFuncao;
+    if (dia === 0) {
+        return diaSemanaTextoifComFuncao = 'Domingo';
+    }
+    else if (dia === 1) {
+        return diaSemanaTextoifComFuncao = 'Segunda';
+    }
+    else if (dia === 2) {
+        return diaSemanaTextoifComFuncao = 'Terça';
+    }
+    else if (dia === 3) {
+        return diaSemanaTextoifComFuncao = 'Quarta';
+    }
+    else if (dia === 4) {
+        return diaSemanaTextoifComFuncao = 'Quinta';
+    }
+    else if (dia === 5) {
+        return diaSemanaTextoifComFuncao = 'Sexta';
+    }
+    else if (dia === 6) {
+        return diaSemanaTextoifComFuncao = 'Sábado';
+    }
+    else {
+        return diaSemanaTextoifComFuncao = "erro";
+    }
+
+}
+
+console.log(`Dia da semana com if dentro de função: ${dia}, ${plotDiaSemanaIfComFuncao}`);

@@ -1,0 +1,37 @@
+// For in -> lê os índices ou chaves do objeto
+/////Retorna INDICES/////////
+//                0        1      2
+const frutas = ['Pera', 'Maçā', 'Uva'];
+for (let index in frutas) {
+    console.log(frutas[index]);//Pera Maçā Uva
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+//se eu usar objetos
+let pessoa = {
+    nome: 'junior',
+    sobrenome: 'hennemann',
+    idade: 23
+}
+for (let i in pessoa) {
+    console.log([i]);
+    /*[ 'nome' ]
+    [ 'sobrenome' ]
+    [ 'idade' ]*/
+    console.log(pessoa[i]);
+    /*junior
+    hennemann
+    23*/
+}
+console.log('///////////////////////////////////////////////////////////////////////////////////');
+let pessoa2 = {
+    nome: 'lucas',
+    sobrenome: 'hennemann',
+    idade: 33
+}
+for (let i in pessoa) {
+    console.log(i, pessoa[i]);
+    //nome junior
+    //sobrenome hennemann
+    // idade 23
+}

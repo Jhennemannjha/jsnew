@@ -1,0 +1,53 @@
+//Escrevadois  função que recebe 2 numero retorne o maior deles
+let num1 = Math.random() * 100;
+let num2 = Math.random() * 100;
+let numero1 = numero(num1, num2);
+function numero(num1, num2) {
+    numeroMaior = Math.max(num1, num2)
+    console.log(numeroMaior)
+    numeroMenor = Math.min(num1, num2)
+    console.log(numeroMenor)
+    return numeroMaior;
+}
+
+console.log(`${numero1} é o numero maior`);
+
+
+
+///////////////////////////////////////////////////////////////
+function max(x, y) {
+    if (x > y) {
+        return x;
+    }
+
+    return y;
+}
+console.log(max(10, 2));
+
+///////////////////////////////////////////////////////////////
+function max(x, y) {
+    if (x > y) return x;
+    return y;
+}
+console.log(max(12, 2));
+
+///////////////////////////////////////////////////////////////
+function max(x, y) {
+    //? entao
+    //: ao contrario disso
+    return (x > y ? x : y) 
+}
+console.log(max(13, 2));
+
+/////////////////////////////////////////////////////////////////
+//eron function
+const max2 = (x,y) => {
+    return (x > y ? x : y) 
+}
+console.log(max(20, 2));
+
+/////////////////////////////////////////////////////////////////
+//eron function
+const max3 = (x,y) => (x > y ? x : y) 
+
+console.log(max3(30, 2));

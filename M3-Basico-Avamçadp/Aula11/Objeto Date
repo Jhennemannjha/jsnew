@@ -1,0 +1,86 @@
+//Geitos possiveis de mostrar a data
+/*
+new Date(); hora de agora
+new Date(valor);milesegundo
+new Date(dataString); informa date com numero
+new Daterano, mês, dia, hora, minuto, segundo, milissegundo); informar a data com number
+*/
+
+
+//criando operação construtora sempre se usa nem e new e a função construtora com letra maiuscula
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global Objects/Date
+//Date trabalha em milisegundos (por isso *1000 no final que eigual a 1 minuto)
+
+
+
+//sem nada sdentro de date(omitir), retorno a hora de agora e dias padrao gringo
+const data = new Date();
+//console.log(data.toString());
+
+
+
+
+//               seg*mint*hora*miliseg
+const tresHoras =60 * 60 * 3 * 1000;
+const umDia =60 * 60 * 24 * 1000;
+const data1 = new Date(0 + tresHoras+ umDia); // 01/01/1970 Timestamp unix ou época unix
+//toString retorna data no formato gringo
+console.log(data1.toString());
+
+
+
+
+const data2 = new Date('2014/01/04 20:20:30.800');//Sat Jan 04 2014 20:20:30 GMT-0200 (Horário de Verão de Brasília)
+//aqui o mes e normal por ser uma string
+console.log(data2.toString());
+
+
+
+
+
+
+// informar data
+const data3 = new Date(2024,1,5,10,15,20,800);//Ano, mes,dia,hora,min,segundo,milisegungo
+//mes começa do 0 a 11 onde 0 é janeiro
+// pode se ometir no maximo ate o mes
+//se deixar só o ano o sistema vai reconhecer milesegundo
+console.log(data3.toString());
+
+
+//buscar infrmações
+console.log('Dia', data2.getDate());
+console. log('Mês', data2.getMonth() + 1);//mes começa do 0
+console. log('Ano', data2.getFullYear());
+console.log('Hora', data2.getHours());
+console.log('Min', data2.getMinutes());
+console.log('Seg', data2.getSeconds());
+console.log('ms', data2.getMilliseconds());
+console. log('Dia semana', data2.getDay()); //0 domingo e 6 e sabado
+console.log(data2.toString());
+
+/////Exercicio
+
+function zeroAEsquerda (num) {
+    return num >= 10 ? num : `0${num}`;
+}
+    function formataData(data4) {
+    const dia = zeroAEsquerda(data4.getDate());
+    const mes = zeroAEsquerda(data4.getMonth()+1);
+    const ano = zeroAEsquerda(data4.getFullYear());
+    const hora = zeroAEsquerda(data4.getHours());
+    const min = zeroAEsquerda(data4.getMinutes());
+    const seg = zeroAEsquerda(data4.getSeconds());
+    
+    return `${dia}/${mes}/${ano} ${hora}:${min}:${seg}`;
+    }
+    const data4 = new Date() ;
+    const dataBrasil = formataData(data4);
+    console.log(dataBrasil);
+
+
+
+
+
+
+
+
